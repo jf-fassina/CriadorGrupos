@@ -247,6 +247,26 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Getter para o JSpinner
+    public int getValorJSpinner() {
+        return (int) numSelecionado.getValue();
+    }
+
+    // Getter para a areaTexto
+    public String getAreaTexto() {
+        return areaTexto.getText();
+    }
+
+    // Getter para o botão botAlunos
+    public boolean getBotAlunos() {
+        return botAlunos.isSelected();
+    }
+
+    // Getter para o botão botGrupos
+    public boolean getBotGrupos() {
+        return botGrupos.isSelected();
+    }
+
     private void menuCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCreditosActionPerformed
 
         JOptionPane.showMessageDialog(null,
@@ -340,17 +360,16 @@ public class Main extends javax.swing.JFrame {
                 SeparadorDeAlunos separador = new SeparadorDeAlunos();//chama do arquivo SeparadorDeAlunos
                 ArrayList<String> lista = separador.separarAlunos();
 
-
                 StringBuilder sb = new StringBuilder();
-                
-                    for (String elemento : lista) {
-                            sb.append(elemento).append("\n");
-                            
-                    }               
-                        String resultado = sb.toString();
-                        
-                    areaSeparada.setText(resultado);
-                    
+
+                for (String elemento : lista) {
+                    sb.append(elemento).append("\n");
+
+                }
+                String resultado = sb.toString();
+
+                areaSeparada.setText(resultado);
+
                 break;
 
             //Grupos
@@ -411,26 +430,6 @@ public class Main extends javax.swing.JFrame {
 
         }
 
-    }
-
-    // Getter para o JSpinner
-    public int getValorJSpinner() {
-        return (int) numSelecionado.getValue();
-    }
-
-    // Getter para a areaTexto
-    public String getAreaTexto() {
-        return areaTexto.getText();
-    }
-
-    // Getter para o botão botAlunos
-    public boolean getBotAlunos() {
-        return botAlunos.isSelected();
-    }
-
-    // Getter para o botão botGrupos
-    public boolean getBotGrupos() {
-        return botGrupos.isSelected();
     }
 
     public static void main(String args[]) {

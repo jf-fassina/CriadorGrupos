@@ -5,28 +5,32 @@ import java.util.Random;
 
 public class SeparadorDeAlunos {
 
-    ArrayList<String> listaBase = new ArrayList<>();
-    ArrayList<String> separador = new ArrayList<>();
-    ArrayList<String> listaSeparada = new ArrayList<>();
-    
-    Main criadorDeGrupos = new Main();
-    String texto = criadorDeGrupos.getAreaTexto();
-    int divisor = criadorDeGrupos.getValorJSpinner();
-
     public ArrayList<String> separarAlunos() {
 
-        String[] items = texto.split("\n");
-        for (String item : items) {
-           listaBase.add(item);
-        }
-        System.out.println(listaBase);
-        
-//        listaBase.addAll(Arrays.asList(nomesArray));
-        //pega o texto da areaTexto e transforma em um arrayList
-        
-        Random random = new Random();     
+        ArrayList<String> listaBase = new ArrayList<>();
+        ArrayList<String> separador = new ArrayList<>();
+        ArrayList<String> listaSeparada = new ArrayList<>();
 
-/*
+        Main criadorDeGrupos = new Main();
+        String texto = criadorDeGrupos.getAreaTexto();
+        int divisor = criadorDeGrupos.getValorJSpinner();
+        
+        System.out.println(texto);
+        
+
+        String[] items = texto.split("\n");
+        listaBase.addAll(Arrays.asList(items));
+        //pega o texto da areaTexto e transforma em um arrayList
+        System.out.println("split");
+        for (int i = 0; i < listaBase.size(); i++) {
+
+            System.out.println(listaBase.get(i));
+
+        }
+
+        Random random = new Random();
+
+        /*
             for (int tamanho = 0; tamanho < numLinhas; tamanho++) {
                 System.out.println("sorteador");
                 //  SORTEADOR   
@@ -38,7 +42,8 @@ public class SeparadorDeAlunos {
                 listaBase.remove(index); //tira o nome da listaBase
 
             }
-*/
+         */
+        System.out.println("sorteador");
         return listaSeparada;
     }
 
